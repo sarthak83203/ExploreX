@@ -9,13 +9,18 @@ const Schema=new mongoose.Schema({
         type:String,
         required:true,
     },
-    image:{
-        type:String,
-        default:"Link",
-        //setting the value set..
-        // set:(v)=>v===""?"row.webp":v,
-        required:true,
+    //Little modification done here...
+     image: {
+        filename: {
+            type: String,
+            required: true,
+        },
+        url: {
+            type: String,
+            required: true,
+        },
     },
+   
     price:{
         type:Number,
         required:true,
